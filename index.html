@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vanilla DOCX Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="toolbar">
+        <div class="file-ops">
+            <input type="file" id="fileInput" hidden>
+            <button onclick="document.getElementById('fileInput').click()">Open DOCX</button>
+            <button id="saveBtn">Save As DOCX</button>
+        </div>
+        <div class="formatting">
+            <button data-command="bold"><b>B</b></button>
+            <button data-command="italic"><i>I</i></button>
+            <button data-command="underline"><u>U</u></button>
+        </div>
+    </header>
+
+    <main class="viewport">
+        <div id="editor" contenteditable="true" spellcheck="false">
+            <p>Your document will appear here...</p>
+        </div>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

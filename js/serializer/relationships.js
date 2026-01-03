@@ -1,0 +1,11 @@
+// js/serializer/relationships.js
+import { XML_HEADER } from "./escape_xml.js";
+
+export function packageRelsXml() {
+    return `${XML_HEADER}
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Id="rId1"
+    Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
+    Target="word/document.xml"/>
+</Relationships>`;
+}
